@@ -1,0 +1,13 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    {{ if .IsHome }} {{ .Site.Title }} {{ else }} {{ .Title }} | {{ .Site.Title
+    }} {{ end }}
+  </title>
+
+  {{ $styles := resources.Get "/css/style.css" }} {{ $styles = $styles |
+  css.PostCSS (dict "inlineImports" true) }} {{ if hugo.IsProduction }} {{
+  $styles = $styles | minify | fingerprint | resources.PostProcess }} {{ end }}
+  <link href="{{ $styles.RelPermalink }}" rel="stylesheet" />
+</head>

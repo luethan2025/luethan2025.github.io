@@ -1,0 +1,126 @@
+{{ define "main" }}
+<div class="container mx-auto px-4 py-8 max-w-prose">
+  <!-- Hero -->
+  <section class="mb-4">
+    <div class="text-left">
+      <h1 class="text-5xl md:text-5xl font-bold text-gray-900 mb-2">
+        {{ .Site.Title }}
+      </h1>
+      <h2 class="text-lg md:text-lg text-gray-800">
+        <b>ECE</b> @
+        <a
+          href="https://www.cmu.edu"
+          class="text-blue-500 hover:underline"
+          target="_blank"
+          >Carnegie Mellon University</a
+        >
+      </h2>
+    </div>
+  </section>
+  <section class="flex flex-col md:flex-row items-start mb-10">
+    <div class="md:w-2/3 text-left order-2 md:order-1 mt-6 md:mt-0">
+      <p class="text-lg">
+        I recently graduated from CMU with a B.S. in Electrical and Computer
+        Engineering. My current academic focus lies within the intersection of
+        machine learning and security and privacy.
+      </p>
+    </div>
+    <div
+      class="md:w-1/3 mt-0 md:ml-8 order-1 md:order-2 flex justify-center"
+    ></div>
+  </section>
+
+  <section class="mb-10">
+    <h2 class="text-3xl font-bold mb-4">Experience</h2>
+    <div class="flex flex-row items-center justify-center mb-8">
+      <div class="w-custom-exp-left">
+        <a href="https://www.ece.cmu.edu/" target="_blank">
+          <img
+            href=""
+            src="/images/logos/cmu_ece_logo.jpg"
+            class="drop-shadow-lg rounded"
+            title="CMU ECE"
+          />
+        </a>
+      </div>
+      <div class="w-custom-exp-right ml-5">
+        <h3>
+          <span class="font-bold">CMU Electrical and Computer Engineering</span>
+        </h3>
+        <p>Research Assistant (LIONS research group)</p>
+        <p>May 2025 to Present</p>
+      </div>
+    </div>
+    <div class="flex flex-row items-center justify-center mb-8">
+      <div class="w-custom-exp-left">
+        <a href="https://www.cs.cmu.edu/" target="_blank">
+          <img
+            href=""
+            src="/images/logos/cmu_scs_logo.jpg"
+            class="drop-shadow-lg rounded"
+            title="CMU SCS"
+          />
+        </a>
+      </div>
+      <div class="w-custom-exp-right ml-5">
+        <h3><span class="font-bold">CMU School of Computer Science</span></h3>
+        <p>Research Assistant (Requirements Engineering Lab)</p>
+        <p>August 2022 - May 2025</p>
+      </div>
+    </div>
+    <div class="flex flex-row items-center justify-center mb-8">
+      <div class="w-custom-exp-left">
+        <a href="https://www.aboutamazon.com/" target="_blank">
+          <img
+            href=""
+            src="/images/logos/amazon_logo.jpg"
+            class="drop-shadow-lg rounded"
+            title="Amazon"
+          />
+        </a>
+      </div>
+      <div class="w-custom-exp-right ml-5">
+        <h3><span class="font-bold">Amazon</span></h3>
+        <p>Software Development Engineer Intern</p>
+        <p>June 2025 - August 2025</p>
+      </div>
+    </div>
+    <div class="flex flex-row items-center justify-center mb-8">
+      <div class="w-custom-exp-left">
+        <a href="https://www.ri.cmu.edu/" target="_blank">
+          <img
+            href=""
+            src="/images/logos/cmu_ri_logo.jpg"
+            class="drop-shadow-lg rounded"
+            title="CMU RI"
+          />
+        </a>
+      </div>
+      <div class="w-custom-exp-right ml-5">
+        <h3><span class="font-bold">CMU Robotics Institute</span></h3>
+        <p>Research Assistant (Human Sensing Lab)</p>
+        <p>March 2022 - August 2022</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-10">
+    <h2 class="text-3xl font-bold mb-4">Education</h2>
+    <div class="flex flex-row items-center justify-center mb-8">
+      <div class="w-custom-exp-left">
+        <img
+          href=""
+          src="/images/logos/cmu_school_logo.jpg"
+          class="drop-shadow-lg rounded"
+          title="Carnegie Mellon University"
+        />
+      </div>
+      <div class="w-custom-exp-right ml-5">
+        <h3><span class="font-bold">Carnegie Mellon University</span></h3>
+        <p>B.S. in Electrical and Computer Engineering</p>
+        <p>2021 - 2025</p>
+      </div>
+    </div>
+  </section>
+</div>
+{{ end }}

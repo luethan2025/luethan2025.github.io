@@ -1,0 +1,7 @@
+.DS_Store
+node_modules/
+package-lock.json
+pnpm-lock.yaml
+.hugo_build.lock
+public/
+resources/

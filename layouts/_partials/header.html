@@ -1,0 +1,19 @@
+<header class="bg-white shadow-sm">
+  <nav class="container mx-auto px-4 py-4 max-w-prose">
+    <div class="flex justify-between items-center">
+      <!-- Only display title if not on base -->
+      <a href="/" class="flex font-bold text-gray-900">
+        {{ if ne .Permalink .Site.BaseURL }} {{ .Site.Title }} {{ end }}
+      </a>
+
+      <!-- URLs on right -->
+      <div class="lg:flex space-x-6 justify-end" id="nav-content">
+        {{ range .Site.Menus.main }}
+        <a href="{{ .URL }}" class="text-gray-600 hover:text-gray-900">
+          {{ .Name }}
+        </a>
+        {{ end }}
+      </div>
+    </div>
+  </nav>
+</header>

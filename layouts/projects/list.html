@@ -1,0 +1,26 @@
+{{ define "main" }}
+<div class="container mx-auto px-4 py-8 max-w-prose">
+  <!-- Title -->
+  <section class="mb-10">
+    <div class="text-left">
+      <h2 class="text-2xl font-bold mb-4">Projects</h2>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  {{ $projects := where .Site.RegularPages "Params.topics" "intersect" (slice
+  "project") }} {{ if $projects }}
+  <section class="mb-8">
+    <ul>
+      {{ range $projects }}
+      <li class="text-lg">
+        <a href="{{ .RelPermalink }}" class="text-blue-500 hover:underline"
+          >{{ .Title }}</a
+        >
+      </li>
+      {{ end }}
+    </ul>
+  </section>
+  {{ end }}
+</div>
+{{ end }}
