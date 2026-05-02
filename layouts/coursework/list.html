@@ -50,18 +50,49 @@
 
   <!-- Coursework  -->
   {{ $courses := where .Site.RegularPages "Params.topics" "intersect" (slice
-  "course") }} {{ if $courses }} {{ $lti := slice }} {{ $ri := slice }} {{ $cs
-  := slice }} {{ $ece := slice }} {{ range $courses }} {{ if strings.HasPrefix
-  .Title "11" }} {{ $lti = $lti | append . }} {{ else if strings.HasPrefix
-  .Title "16" }} {{ $ri = $ri | append . }} {{ else if strings.HasPrefix .Title
-  "15" }} {{ $cs = $cs | append . }} {{ else if strings.HasPrefix .Title "18" }}
-  {{ $ece = $ece | append . }} {{ end }} {{ end }} {{ if $lti }}
+  "course") }} {{ if $courses }} {{ $ml := slice }} {{ $lti := slice }} {{ $cive
+  := slice }} {{ $ri := slice }} {{ $cs := slice }} {{ $ece := slice }} {{ range
+  $courses }} {{ if strings.HasPrefix .Title "10" }} {{ $ml = $ml | append . }}
+  {{ else if strings.HasPrefix .Title "11" }} {{ $lti = $lti | append . }} {{
+  else if strings.HasPrefix .Title "12" }} {{ $cive = $cive | append . }} {{
+  else if strings.HasPrefix .Title "16" }} {{ $ri = $ri | append . }} {{ else if
+  strings.HasPrefix .Title "15" }} {{ $cs = $cs | append . }} {{ else if
+  strings.HasPrefix .Title "18" }} {{ $ece = $ece | append . }} {{ end }} {{ end
+  }} {{ if $ml }}
+  <section class="mb-8">
+    <h2 class="text-xl font-bold text-gray-900 mb-4">Machine Learning</h2>
+    <ul>
+      {{ range $ml }}
+      <li class="text-lg">
+        <a href="{{ .RelPermalink }}" class="text-blue-500 hover:underline"
+          >{{ .Title }}</a
+        >
+      </li>
+      {{ end }}
+    </ul>
+  </section>
+  {{ end }} {{ if $lti }}
   <section class="mb-8">
     <h2 class="text-xl font-bold text-gray-900 mb-4">
       Language Technologies Institute
     </h2>
     <ul>
       {{ range $lti }}
+      <li class="text-lg">
+        <a href="{{ .RelPermalink }}" class="text-blue-500 hover:underline"
+          >{{ .Title }}</a
+        >
+      </li>
+      {{ end }}
+    </ul>
+  </section>
+  {{ end }} {{ if $cive }}
+  <section class="mb-8">
+    <h2 class="text-xl font-bold text-gray-900 mb-4">
+      Civil and Environmental Engineering
+    </h2>
+    <ul>
+      {{ range $cive }}
       <li class="text-lg">
         <a href="{{ .RelPermalink }}" class="text-blue-500 hover:underline"
           >{{ .Title }}</a
