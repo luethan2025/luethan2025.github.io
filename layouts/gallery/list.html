@@ -1,0 +1,24 @@
+{{ define "main" }}
+<div class="container mx-auto px-4 py-8 max-w-prose">
+  <!-- Title -->
+  <section class="mb-10">
+    <div class="text-left">
+      <h2 class="text-2xl font-bold mb-4">Blog</h2>
+    </div>
+  </section>
+
+  {{ $posts := where .Site.RegularPages "Type" "post" }} {{ if $posts }}
+  <section class="mb-8">
+    <ul>
+      {{ range $posts }}
+      <li class="text-lg">
+        <a href="{{ .RelPermalink }}" class="text-blue-500 hover:underline"
+          >{{ .Title }}</a
+        >
+      </li>
+      {{ end }}
+    </ul>
+  </section>
+  {{ end }}
+</div>
+{{ end }}
